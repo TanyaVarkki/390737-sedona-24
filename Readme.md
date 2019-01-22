@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Таня Варкки](https://up.htmlacademy.ru/htmlcss/24/user/390737).
-* Наставник: `Неизвестно`.
+* Наставник: `Дмитрий Перейро`(https://htmlacademy.ru/profile/perejro).
 
 ---
 
