@@ -39,7 +39,7 @@
 				<h2 class="visually-hidden">Преимущества</h2>
 				<ul class="description-list">
 					<li class="description-item">
-						<div class="description-image"></div>
+						<div class="description-image" aria-label="Изображение города Седона"></div>
 						<div class="description-content">
 							<h3 class="description-title">Настоящий городок</h3>
 							<span class="description-number">-№1-</span>
@@ -67,7 +67,7 @@
 						</ul>
 					</li>
 					<li class="description-item">
-						<div class="description-image"></div>
+						<div class="description-image" aria-label="Изображение моста дьявола"></div>
 						<div class="description-content">
 							<h3 class="description-title">Там есть Мост дьявола</h3>
 							<span class="description-number">-№2-</span>
@@ -110,15 +110,36 @@
 				<p class="search-hotel-text">Укажите предполагаемые даты поездки,
 					и мы покажем вам лучшие предложения гостиниц в седоне</p>
 					<button class="button" type="submit">Поиск гостиницы в Седоне</button>
+					<form class="search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
+						<p class="serch-hotel-item">
+						 <label for="arrival-date">Дата заезда:</label>
+						 <input id="arrival-date" type="text" name="arrival-date" value="24 апреля 2017" placeholder="">
+					  </p>
+						<p class="search-hotel-item">
+							<label for="departure-date">Дата выезда:</label>
+							<input id="departure-date" type="text" name="departure-date" value="4 июля 2017" placeholder="">
+						</p>
+						<p class="search-hotel-item">
+							<label for="number-of-adult">Количество взрослых:</label>
+							<input id="number-of-adult" type="number" name="number-of-adult" step="1" value="2">
+						</p>
+						<p class="search-hotel-item">
+							<label for="number-of-children">Количество детей:</label>
+							<input id="number-of-children" type="number" name="number-of-children" step="1" value="0">
+						</p>
+						<button class="button" type="submit">Найти</button>
+					</form>
 			</section>
-			<section class="map"></section>
+			<section class="map">
+				<div class="map-image" aria-label="Изображение города Седона на карте"></div>
+			</section>
    </main>
 	 <footer class="main-footer">
 		 <a class="main-footer-logo" href="#">#visitSEDONA</a>
 		 <ul class="footer-social">
-			 <li><a class="social-btn" href="twitter.com">Твиттер</a></li>
-			 <li><a class="social-btn" href="facebook.com">Фейсбук</a></li>
-			 <li><a class="social-btn" href="youtube.ru">Ютуб</a></li>
+			 <li><a class="social-btn" href="twitter.com" aria-label="Седона в Твиттере"></a></li>
+			 <li><a class="social-btn" href="facebook.com" aria-label="Седона в Фейсбуке"></a></li>
+			 <li><a class="social-btn" href="youtube.ru" aria-label="Седона на Ютубе"></a></li>
 		 </ul>
 		 <p class="footer-copyright">Website by
 			 <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
