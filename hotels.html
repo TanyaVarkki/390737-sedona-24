@@ -29,8 +29,9 @@
     <main class="container">
       <section class="hotels-filter">
         <h2 class="visually-hidden">Сортировка гостиниц</h2>
-        <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <h3 class="filter-title">Инфраструктура:</h3>
+        <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+          <legend class="filter-title">Инфраструктура:</legend>
           <ul class="structure-filter">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
@@ -48,47 +49,59 @@
               <label for="wifi">Wi-fi</label>
             </li>
           </ul>
-          <h3 class="filter-title">Тип жилья:</h3>
-          <ul class="type-filter">
-            <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="hotel" id="hotel" checked>
-              <label for="hotel">Гостиница</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="motel" id="motel" checked>
-              <label for="motel">Мотель</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="apart" id="apart" checked>
-              <label for="apart">Апартаменты</label>
-            </li>
-          </ul>
-          <h3 class="filter-title">Стоимость в сутки(р):</h3>
-          <p class="day-price-range">
-            <span class="min-price">от 0</span>
-            <span class="max-price">до 3000<span>
-            <input type="range" name="price-range" min="0" max="3000" step="100">
-          </p>
-          <button type="submit" class="sort-button button">Показать</button>
+          </fieldset>
+          <fieldset>
+           <legend class="filter-title">Тип жилья:</legend>
+           <ul class="type-filter">
+             <li class="filter-option">
+               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+               name="hotel" id="hotel" checked>
+               <label for="hotel">Гостиница</label>
+             </li>
+             <li class="filter-option">
+               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+               name="motel" id="motel" checked>
+               <label for="motel">Мотель</label>
+             </li>
+             <li class="filter-option">
+               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+               name="apart" id="apart" checked>
+               <label for="apart">Апартаменты</label>
+             </li>
+           </ul>
+          </fieldset>
+           <legend class="filter-title">Стоимость в сутки(р):</legend>
+           <div class="day-price-range">
+             <ul class="day-price-range-list">
+               <li class="day-price-range-item">
+               <label for="min">от</label>
+               <input class="min-price" id="min" type="number" value="0">
+              </li>
+              <li class="day-price-range-item">
+               <label for="max">до</label>
+               <input class="max-price" id="max" type="number" value="3000">
+              </li>
+             </ul>
+             <input type="range" name="price-range" min="0" max="3000" step="100">
+           </div>
+           <button type="submit" class="sort-button button">Показать</button>
+         </fieldset>
         </form>
       </section>
       <section class="hotels-sort-result">
         <h2 class="hotels-sort-title">Найдено: 3</h2>
         <p class="hotels-sort-by">Сортировка:</p>
         <ul class="hotels-sort-list">
-          <li class="hotels-sort-item hotels-sort-current">По цене</li>
+          <li class="hotels-sort-item hotels-sort-current"><a>По цене</a></li>
           <li class="hotels-sort-item"><a href="#">По типу</a></li>
           <li class="hotels-sort-item"><a href="#">По рейтингу</a></li>
         </ul>
         <ul class="hotels-range-list">
   				<li class="hotels-range-item hotels-range-current">
-            <span class="visually-hidden">По возрастанию</span>
+            <a class="hotels-range-up" aria-label="Сортировка по возрастанию"></a>
           </li>
   				<li class="hotels-range-item">
-            <span class="visually-hidden"><a href="#">По убыванию</a></span>
+            <a class="hotels-range-down" aria-label="Сортировка по убыванию"></a>
           </li>
   			</ul>
         <ul class="hotels-list">
