@@ -111,27 +111,33 @@
 					и мы покажем вам лучшие предложения гостиниц в седоне</p>
 					<button class="button" type="submit">Поиск гостиницы в Седоне</button>
 					<form class="search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
-						<p class="serch-hotel-item">
+						<div class="serch-hotel-item">
 						 <label for="arrival-date">Дата заезда:</label>
 						 <input id="arrival-date" type="text" name="arrival-date" value="24 апреля 2017" placeholder="">
-					  </p>
-						<p class="search-hotel-item">
+						 <button class="date-button" type="button" aria-label="Календарь">
+					 </div>
+						<div class="search-hotel-item">
 							<label for="departure-date">Дата выезда:</label>
 							<input id="departure-date" type="text" name="departure-date" value="4 июля 2017" placeholder="">
-						</p>
-						<p class="search-hotel-item">
+							<button class="date-button" type="button" aria-label="Календарь">
+						</div>
+						<div class="search-hotel-item">
 							<label for="number-of-adult">Количество взрослых:</label>
+							<button class="number-button" type="button" value="-">
 							<input id="number-of-adult" type="number" name="number-of-adult" step="1" value="2">
-						</p>
-						<p class="search-hotel-item">
+							<button class="number-button" type="button" value="+">
+						</div>
+						<div class="search-hotel-item">
 							<label for="number-of-children">Количество детей:</label>
+							<button class="number-button" type="button" value="-">
 							<input id="number-of-children" type="number" name="number-of-children" step="1" value="0">
-						</p>
+							<button class="number-button" type="button" value="+">
+						</div>
 						<button class="button" type="submit">Найти</button>
 					</form>
 			</section>
 			<section class="map">
-				<div class="map-image" aria-label="Изображение города Седона на карте"></div>
+				<h2 class="visually-hidden">Изображение города Седона на карте</h2>
 			</section>
    </main>
 	 <footer class="main-footer">
