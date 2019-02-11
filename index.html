@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Седона</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic"
+		rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header">
@@ -109,7 +113,7 @@
 				<h2 class="search-hotel-title">Заинтересовались?</h2>
 				<p class="search-hotel-text">Укажите предполагаемые даты поездки,
 					и мы покажем вам лучшие предложения гостиниц в седоне</p>
-					<button class="button" type="submit">Поиск гостиницы в Седоне</button>
+					<button class="button button-search" type="submit">Поиск гостиницы в Седоне</button>
 					<form class="search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
 						<div class="serch-hotel-item">
 						 <label for="arrival-date">Дата заезда:</label>
@@ -133,7 +137,7 @@
 							<input id="number-of-children" type="number" name="number-of-children" step="1" value="0">
 							<button class="number-button" type="button">+</button>
 						</div>
-						<button class="button" type="submit">Найти</button>
+						<button class="button search-form" type="submit">Найти</button>
 					</form>
 			</section>
 			<section class="map">
@@ -148,8 +152,8 @@
 			 <li><a class="social-btn" href="youtube.ru" aria-label="Седона на Ютубе"></a></li>
 		 </ul>
 		 <p class="footer-copyright">Website by
-			 <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-			 HTML Academy</a>
+			 <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"
+			 aria-label="HTML Academy"></a>
 		 </p>
 	 </footer>
 	</body>

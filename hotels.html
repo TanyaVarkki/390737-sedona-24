@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic"
+    rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header">
@@ -29,7 +33,7 @@
     <main class="container">
       <section class="hotels-filter">
         <h2 class="visually-hidden">Сортировка гостиниц</h2>
-        <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
           <legend class="filter-title">Инфраструктура:</legend>
           <ul class="structure-filter">
@@ -117,7 +121,7 @@
              </div>
              <div class="hotel-booking">
                <p class="hotel-price">От 4000 Р.</p>
-               <button class="button" type="submit">Забронировать</button>
+               <button class="button booking-button" type="submit">Забронировать</button>
              </div>
             </div>
             <div class="hotel-rating">
@@ -142,7 +146,7 @@
              </div>
              <div class="hotel-booking">
                <p class="hotel-price">От 3000 Р.</p>
-               <button class="button" type="submit">Забронировать</button>
+               <button class="button booking-button" type="submit">Забронировать</button>
              </div>
             </div>
             <div class="hotel-rating">
@@ -166,7 +170,7 @@
              </div>
              <div class="hotel-booking">
                <p class="hotel-price">От 2000 Р.</p>
-               <button class="button" type="submit">Забронировать</button>
+               <button class="button booking-button" type="submit">Забронировать</button>
              </div>
             </div>
             <div class="hotel-rating">
@@ -188,8 +192,8 @@
 			 <li><a class="social-btn" href="youtube.ru" aria-label="Седона на Ютубе"></a></li>
 		 </ul>
 		 <p class="footer-copyright">Website by
-			 <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-			 HTML Academy</a>
+       <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"
+			 aria-label="HTML Academy"></a>
 		 </p>
 	 </footer>
 	</body>
