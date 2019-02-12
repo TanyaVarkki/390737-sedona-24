@@ -48,7 +48,7 @@ a {
 
 .sedona-welcome {
   background-color: #81b3d2;
-  background-image: url("img/background-photo.jpg");
+  background-image: url("../img/background-photo.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -176,7 +176,7 @@ a {
 
 .hotels-filter {
   background-color: #81b3d2;
-  background-image: url("img/filter-background.jpg");
+  background-image: url("../img/filter-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -196,9 +196,13 @@ a {
   color: #ffffff;
 }
 
+/*  цвет чекбокса при блокировке
+
 .filter-input-checkbox:disabled {
   fill: #6a6a6a;
 }
+
+*/
 
 .sort-button {
   font-weight: 400;
@@ -254,6 +258,8 @@ a {
   border-bottom: none;
 }
 
+/* цвета иконок ранжировки
+
 .hotels-range-list a {
   fill: #cacaca;
 }
@@ -269,6 +275,8 @@ a {
 .hotels-range-current {
   fill: #81b3d2;
 }
+
+*/
 
 .hotel-title a {
   font-size: 21px;
@@ -320,6 +328,8 @@ a {
   color: #000000;
 }
 
+/* цвета иконок соц. сетей
+
 .footer-copyright a {
   fill: #231f20;
 }
@@ -331,3 +341,5 @@ a {
 .footer-copyright a:active {
   fill: #bdbbbc;
 }
+
+*/
