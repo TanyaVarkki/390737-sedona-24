@@ -21,6 +21,7 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  vertical-align: middle;
 
   background-color: #ffffff;
 }
@@ -119,6 +120,10 @@ a {
 }
 
 .button-search {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+
   background-color: #766357;
 }
 
@@ -344,33 +349,37 @@ a {
 
 */
 
+
+
 /* СЕТКА */
 
+html,
 body {
-  /* Временно для сетки */
-  background-color: #f2f2f2;
-  background-image: url('../img/sedona-index.jpg');
-  background-size: 1280px auto;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-width: 1200px;
+  min-height: 2762px;
+}
 
-  padding-left: 40px;
-  padding-right: 40px;
+body {
+
+  background-color: #f2f2f2;
+
+  margin: 0 auto;
 }
 
 .main-navigation {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
+  position: relative;
   width: 1200px;
-  min-height: 58px;
+  min-height: 55px;
   background-color: #ffffff;
-  margin: 0 auto;
 
+  margin: 0 auto;
 }
 
 .main-header-logo {
+  position: absolute;
   width: 140px;
   height: 71px;
 
@@ -379,10 +388,213 @@ body {
 
 .site-navigation {
   display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation-column {
+  display: flex;
   justify-content: space-around;
+
+  width: 477px;
+  padding-top: 16px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+}
+
+.sedona-welcome {
+  width: 1200;
+  min-height: 509px;
+
+}
+
+.sedona-welcome img {
+  position: relative;
+  top: 77px;
+  left: 370px;
+}
+
+.sedona-info {
+  text-align: center;
+
+  min-height: 216px;
+  padding-top: 60px;
+
+  background-color: #ffffff;
+}
+
+.descriptions {
+  min-height: 1100px;
+  text-align: center;
+}
+
+.description-list {
+  margin: 0;
+  padding: 0;
+}
+
+.description-list > li:first-of-type {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 256px;
+}
+
+.description-list > li:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  min-height: 256px;
+}
+
+.description-content {
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 256px;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+li:first-child .description-image {
+  width: 800px;
+
+  background-image: url("../img/sityview.jpg");
+  background-size: 800px 256px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+li:nth-child(3) .description-image {
+  width: 800px;
+
+  background-image: url("../img/bridge.jpg");
+  background-size: 800px 256px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.advantages-list {
+  display: flex;
+  min-height: 330px;
 
   margin: 0;
   padding: 0;
 
-  list-style: none;
+  background-color: #ffffff;
+}
+
+.advantage-item {
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 256px;
+  padding-top: 158px;
+  padding-left: 74px;
+  padding-right: 74px;
+}
+
+.other-descriptions {
+  min-height: 256px;
+
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+
+.other-descriptions .description-content {
+  padding-left: 96px;
+  padding-right: 96px;
+
+}
+
+.search-hotel-column {
+  min-height: 291px;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  padding-left: 313px;
+  padding-right: 313px;
+}
+
+.search-hotel-title {
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.search-hotel-text {
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.button-search {
+  width: 570px;
+  height: 86px;
+}
+
+.search-hotel-form {
+  width: 570px;
+  min-height: 395px;
+
+  margin: 0 auto;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+
+  min-height: 120px;
+
+  padding-top: 80px;
+}
+
+.hotels-filter-form {
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 217px;
+}
+
+.hotels-filter-column {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.hotels-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-item {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 150px;
+  padding: 30px 73px;
+
+  border-top: 2px solid #e5e5e5;
+}
+
+.hotel-item:last-child {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.hotel-image {
+  margin-right: 30px;
+}
+
+.hotel-profile {
+  width: 260px;
+}
+
+.hotel-rating {
+  margin-left: 523px;
 }
