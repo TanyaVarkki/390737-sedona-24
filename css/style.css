@@ -372,7 +372,6 @@ body {
 
   position: relative;
   width: 1200px;
-  min-height: 55px;
   background-color: #ffffff;
 
   margin: 0 auto;
@@ -395,14 +394,6 @@ body {
   list-style: none;
 }
 
-.site-navigation-column {
-  display: flex;
-  justify-content: space-around;
-
-  width: 477px;
-  padding-top: 16px;
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -411,7 +402,6 @@ body {
 
 .sedona-welcome {
   width: 1200;
-  min-height: 509px;
 
 }
 
@@ -424,14 +414,12 @@ body {
 .sedona-info {
   text-align: center;
 
-  min-height: 216px;
   padding-top: 60px;
 
   background-color: #ffffff;
 }
 
 .descriptions {
-  min-height: 1100px;
   text-align: center;
 }
 
@@ -443,21 +431,19 @@ body {
 .description-list > li:first-of-type {
   display: flex;
   flex-direction: row-reverse;
-  min-height: 256px;
 }
 
 .description-list > li:nth-of-type(3) {
   display: flex;
   flex-direction: row;
-  min-height: 256px;
 }
 
 .description-content {
   box-sizing: border-box;
   width: 400px;
-  min-height: 256px;
   padding-top: 50px;
   padding-left: 60px;
+  padding-bottom: 60px;
   padding-right: 60px;
 }
 
@@ -496,11 +482,10 @@ li:nth-child(3) .description-image {
   padding-top: 158px;
   padding-left: 74px;
   padding-right: 74px;
+  padding-bottom: 82px;
 }
 
 .other-descriptions {
-  min-height: 256px;
-
   display: flex;
 
   margin: 0;
@@ -508,14 +493,13 @@ li:nth-child(3) .description-image {
 }
 
 .other-descriptions .description-content {
+  padding-top: 50px;
   padding-left: 96px;
   padding-right: 96px;
-
+  padding-bottom: 60px;
 }
 
 .search-hotel-column {
-  min-height: 291px;
-
   display: flex;
   flex-direction: column;
   padding-top: 55px;
@@ -542,25 +526,29 @@ li:nth-child(3) .description-image {
 
 .search-hotel-form {
   width: 570px;
-  min-height: 395px;
-
   margin: 0 auto;
+}
+
+.map {
+  height: 593px;
 }
 
 .main-footer {
   display: flex;
-  justify-content: space-around;
-
-  min-height: 120px;
+  justify-content: space-between;
 
   padding-top: 80px;
+}
+
+.footer-column {
+  display: flex;
+  justify-content: center;
 }
 
 .hotels-filter-form {
   display: flex;
   justify-content: space-between;
 
-  min-height: 217px;
 }
 
 .hotels-filter-column {
@@ -577,7 +565,6 @@ li:nth-child(3) .description-image {
 .hotel-item {
   display: flex;
   box-sizing: border-box;
-  min-height: 150px;
   padding: 30px 73px;
 
   border-top: 2px solid #e5e5e5;
