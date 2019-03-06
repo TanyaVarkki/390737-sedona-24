@@ -38,6 +38,16 @@ img {
   overflow: hidden;
 }
 
+.main-header {
+  margin: 0 auto;
+  width: 1200px;
+
+  background-color: #81b3d2;
+  background-image: url("../img/background-photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -99,19 +109,22 @@ img {
   color: #766357;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
+.sedona-welcome {
+  position: relative;
+  height: 507px;
 }
 
-.sedona-welcome {
-  background-color: #81b3d2;
-  background-image: url("../img/background-photo.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+.sedona-welcome::before {
+  content: "";
 
-  width: 1200;
-  height: 510px;
+  position: absolute;
+  top: 450px;
+  width: 1200px;
+  height: 59px;
+
+  background-image: url("../img/intro-mask.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .sedona-welcome img {
@@ -121,7 +134,6 @@ img {
 }
 
 .sedona-info {
-  width: 576px;
   margin: 0 auto;
 
   text-align: center;
@@ -130,7 +142,8 @@ img {
 }
 
 .sedona-info h2 {
-  padding: 60px 68px 16px;
+  margin: 0;
+  padding: 60px 312px 16px;
 
   font-size: 21px;
   line-height: 26px;
@@ -139,7 +152,13 @@ img {
 }
 
 .sedona-info p {
-  padding: 16px 44px 58px;
+  margin: 0;
+  padding: 16px 312px 58px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .descriptions {
@@ -236,6 +255,7 @@ li:nth-child(3) .description-image {
 }
 
 .advantage-item {
+  position: relative;
   box-sizing: border-box;
   width: 400px;
   min-height: 256px;
@@ -244,6 +264,46 @@ li:nth-child(3) .description-image {
   padding-right: 74px;
   padding-bottom: 82px;
 }
+
+.advantage-title::before {
+  content: "";
+
+  position: absolute;
+  top: 60px;
+  left: 50%;
+}
+
+.advantage-item:first-child .advantage-title::before {
+  width: 75px;
+  height: 72px;
+  margin-left: -38px;
+
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.advantage-item:nth-child(2) .advantage-title::before {
+  width: 64px;
+  height: 76px;
+  margin-left: -32px;
+
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.advantage-item:last-child .advantage-title::before {
+  width: 74px;
+  height: 70px;
+  margin-left: -37px;
+
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
 
 .other-descriptions {
   display: flex;
@@ -335,6 +395,7 @@ li:nth-child(3) .description-image {
 
 .map {
   height: 593px;
+  margin: 0 auto;
 }
 
 .search-hotel-form {
@@ -563,6 +624,7 @@ li:nth-child(3) .description-image {
 }
 
 .main-footer {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
