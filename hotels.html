@@ -9,6 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
+    <!-- центровщик -->
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo" href="index.html">
@@ -34,8 +35,10 @@
       <section class="hotels-filter">
         <h2 class="visually-hidden">Сортировка гостиниц</h2>
         <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <!-- 2 колонки тут делать не нужна. просто 3 филдсета в идеале, но филдсет себя плохо ведет с флексами, так что можно
+              сделать 3 колонки из дивов -->
 					<div class="hotels-filter-column">
-	          <fieldset>
+	          <fieldset>  <!-- форматирование кода ! -->
 	          <legend class="filter-title">Инфраструктура:</legend>
 	          <ul class="structure-filter">
 	            <li class="filter-option">
@@ -100,6 +103,7 @@
       <section class="hotels-sort-result">
         <h2 class="hotels-sort-title">Найдено: 3</h2>
         <p class="hotels-sort-by">Сортировка:</p>
+        <!-- я бы дал общий родитель -->
         <ul class="hotels-sort-list">
           <li class="hotels-sort-item hotels-sort-current"><a>По цене</a></li>
           <li class="hotels-sort-item"><a href="#">По типу</a></li>
@@ -113,6 +117,7 @@
             <a class="hotels-range-down" aria-label="Сортировка по убыванию"></a>
           </li>
   			</ul>
+        <!-- закрыл родитель -->
         <ul class="hotels-list">
           <li class="hotel-item">
             <div class="hotel-image">
