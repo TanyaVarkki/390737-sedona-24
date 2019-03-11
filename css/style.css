@@ -5,6 +5,8 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
+
+  min-width: 1200px;
 }
 
 .wrapper {
@@ -81,14 +83,6 @@ img {
 
   display: block;
 }
-
- /* .navigation-item:nth-child(2) a {
-  padding-right: 200px;
-}
-
-.navigation-item:nth-child(3) a {
-  padding-left: 200px;
-} */
 
 .site-navigation a:hover,
 .site-navigation a:focus {
@@ -410,12 +404,16 @@ li:nth-child(3) .description-image {
   font-weight: 700;
   color: #000000;
 
+  box-sizing: border-box;
+
   width: 568px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 55px;
+
+  border: 1px solid black;
 }
 
 .search-hotel-item {
@@ -461,10 +459,6 @@ li:nth-child(3) .description-image {
 .search-form:active {
   color: #88b6d1;
   background-color: #5496bd;
-}
-
-.footer-copyright {
-  color: #000000;
 }
 
 
@@ -670,16 +664,14 @@ li:nth-child(3) .description-image {
 .main-footer {
   display: flex;
   margin-top: 80px;
-  padding: 36px 73px;
+  padding: 36px 0;
 }
 
 .footer-column {
   display: flex;
   justify-content: center;
-}
-
-.main-footer ul {
-  list-style: none;
+  align-items: center;
+  width: 400px;
 }
 
 .main-footer-logo {
@@ -688,9 +680,8 @@ li:nth-child(3) .description-image {
   font-weight: 700;
   color: #000000;
 
-  width: 240px;
+  width: 140px;
   margin: 0;
-  margin-right: 214px;
 }
 
 .footer-social {
@@ -726,34 +717,30 @@ li:nth-child(3) .description-image {
 }
 
 .footer-copyright {
+  display: flex;
+  position: relative;
   color: #000000;
-  width: 240px;
+  width: 200px;
   margin: 0;
-  margin-left: auto;
   text-align: center;
 }
 
 .academy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: 81px;
   width: 115px;
   height: 41px;
-  background-color: #000000;
+  background-color: #ffffff;
+
+  margin: 0;
+  padding: 0;
 }
 
-/* цвета иконок соц. сетей
-
-.footer-copyright a {
-  fill: #231f20;
-}
-
-.footer-copyright a:hover {
+.academy:hover path {
   fill: #81b3d2;
 }
 
-.footer-copyright a:active {
+.academy:active path {
   fill: #bdbbbc;
 }
-
-*/
