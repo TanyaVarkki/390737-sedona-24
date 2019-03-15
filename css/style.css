@@ -134,15 +134,15 @@ img {
 
   position: absolute;
 
+  align-self: flex-end;
+
   width: 1200px;
-  height: 59px;
-  bottom: 0;
+  height: 57px;
 
   background-image: url("../img/intro-mask.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-
 
 .sedona-info {
   margin: 0 auto;
@@ -404,9 +404,13 @@ li:nth-child(3) .description-image {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-position: center;
+
+
 }
 
 .search-hotel-form {
+  /* display: none; */
+
   box-sizing: border-box;
 
   width: 568px;
@@ -419,6 +423,9 @@ li:nth-child(3) .description-image {
   color: #000000;
 
   border: 1px solid black;
+  box-shadow:
+	5px 5px 8px -4px rgba(0, 0, 0, 0.2),
+	-5px 5px 8px -4px rgba(0, 0, 0, 0.2);
 }
 
 .search-hotel-item {
@@ -445,6 +452,20 @@ li:nth-child(3) .description-image {
   border: none;
 }
 
+/* .search-hotel-form input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.search-hotel-form input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+} */
+
 .search-hotel-form input:hover {
   background-color: #ebebeb;
 }
@@ -461,27 +482,30 @@ li:nth-child(3) .description-image {
   outline: none;
 }
 
-/*    KALENDAR
+   /* KALENDAR */
 
 .departure-date {
   position: relative;
+}
+
+.date-button path {
+  fill: green;
 }
 
 .date-button {
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: absolute;
   left: 316px;
   top: 10px;
 
-  width: 21px;
-  height: 22px;
   margin: 0;
   padding: 0;
   border: none;
   background-color: #f2f2f2;
-} */
+}
 
 .number-column {
   display: flex;
@@ -542,6 +566,72 @@ li:nth-child(3) .description-image {
   height: 38px;
 }
 
+.minus::before {
+	content: "";
+
+	position: absolute;
+  top: 17px;
+	left: 14px;
+
+	width: 11px;
+	height: 3px;
+
+	background-color: #a9a9a9;
+}
+
+.plus::before {
+	content: "";
+
+	position: absolute;
+  top: 17px;
+	left: 14px;
+
+	width: 11px;
+	height: 3px;
+
+	background-color: #a9a9a9;
+}
+
+.plus::after {
+	content: "";
+
+	position: absolute;
+  top: 17px;
+	left: 14px;
+	transform: rotate(90deg);
+
+	width: 11px;
+	height: 3px;
+
+	background-color: #a9a9a9;
+}
+
+.minus:hover::before,
+.minus:focus::before {
+	background-color: #000000;
+}
+
+.minus:active::before {
+	background-color: #81b3d2;
+}
+
+.plus:hover::before,
+.plus:focus::before {
+	background-color: #000000;
+}
+
+.plus:active::before {
+	background-color: #81b3d2;
+}
+
+.plus:hover::after,
+.plus:focus::after {
+	background-color: #000000;
+}
+
+.plus:active::after {
+	background-color: #81b3d2;
+}
 
 .search-form {
   width: 100%;
@@ -560,26 +650,6 @@ li:nth-child(3) .description-image {
 
   background-color: #5496bd;
 }
-
-
-/*
-.search-hotel-form .date-button,
-.search-hotel-form .number-button {
-  fill: #a9a9a9;
-
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.search-hotel-form .date-button:hover,
-.search-hotel-form .number-button:hover {
-  fill: #000000;
-}
-
-.search-hotel-form .date-button:active,
-.search-hotel-form .number-button:active {
-  fill: #81b3d2;
-} */
 
 .hotels-filter {
   padding: 29px 73px 33px;
@@ -783,7 +853,7 @@ li:nth-child(3) .description-image {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  transform: scale(1.1);
 }
 
 .range-toggle-min {
@@ -1070,6 +1140,14 @@ li:nth-child(3) .description-image {
   display: flex;
 
   padding: 36px 0;
+}
+
+.index-footer {
+  margin-top: -120px;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  z-index: 2;
 }
 
 .footer-column {
