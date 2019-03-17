@@ -27,7 +27,8 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -97,10 +98,7 @@ img {
 }
 
 .site-navigation a {
-  display: block;
-
   color: #000000;
-  vertical-align: middle;
 }
 
 .site-navigation a:hover,
@@ -411,9 +409,13 @@ li:nth-child(3) .description-image {
 
 }
 
-.search-hotel-form {
+.form-show {
   display: block;
-  
+}
+
+.search-hotel-form {
+  display: none;
+
   position: absolute;
   top: 291px;
   left: 316px;
