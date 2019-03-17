@@ -10,6 +10,8 @@ body {
 }
 
 .wrapper {
+  position: relative;
+
   width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -63,6 +65,8 @@ input[type="checkbox"].visually-hidden {
   width: 140px;
   height: 71px;
   margin-left: -70px;
+
+  z-index: 2;
 }
 
 .site-navigation {
@@ -71,7 +75,7 @@ input[type="checkbox"].visually-hidden {
   justify-content: flex-start;
 
   margin: 0;
-  padding: 0;
+  padding: 0 73px 0 73px;
 
   list-style: none;
 }
@@ -81,25 +85,35 @@ input[type="checkbox"].visually-hidden {
 
   width: 20%;
   padding-top: 15px;
-  padding-left: 72px;
   padding-bottom: 15px;
 }
 
 .site-navigation li:nth-child(2) {
   margin-right: auto;
+  padding-left: 28px;
 }
 
 .site-navigation li:nth-child(3) {
-  padding-left: 78px;
+  margin-left: auto;
+  padding-right: 34px;
+
+  text-align: right;
 }
 
 .site-navigation li:nth-child(4) {
-  padding-left: 89px;
+  text-align: right;
 }
 
 .site-navigation a {
   color: #000000;
 }
+
+/* навигация сделана вроде бы, но сейчас костыль у тебя - слева есть отсуп, справа нет.. Как нужно сделать
+1. Дать для ul отспуп слева и справа по 73 пикселя (померяй точно)
+2. только у 2 элемента li нужно дать дополнительный падинг слева и у 3 li Дать дополнительный падинг справа, что бы оно стала как на макете
+
+Как быть с переполнением в данном случае?
+*/
 
 .site-navigation a:hover,
 .site-navigation a:focus {
@@ -115,6 +129,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .sedona-welcome {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,10 +147,9 @@ input[type="checkbox"].visually-hidden {
   content: "";
 
   position: absolute;
+  bottom: 0;
 
-  align-self: flex-end;
-
-  width: 1200px;
+  width: 100%;
   height: 57px;
 
   background-image: url("../img/intro-mask.svg");
@@ -165,11 +180,6 @@ input[type="checkbox"].visually-hidden {
   padding: 13px 312px 54px;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .descriptions {
   text-align: center;
 }
@@ -180,8 +190,7 @@ input[type="checkbox"].visually-hidden {
 
 .descriptions h3 {
   width: 155px;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   padding: 0;
 
   font-size: 21px;
@@ -216,14 +225,13 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
 }
 
-.description-list > li:first-of-type {
+.description-item-reverse {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.description-list > li:nth-of-type(3) {
+.description-item-row {
   display: flex;
-  flex-direction: row;
 }
 
 .description-content {
@@ -236,22 +244,20 @@ input[type="checkbox"].visually-hidden {
   padding-right: 48px;
 }
 
-li:first-child .description-image {
+.description-image {
   width: 800px;
 
-  background-image: url("../img/sityview.jpg");
   background-size: 800px 256px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-li:nth-child(3) .description-image {
-  width: 800px;
+.description-image-sityview {
+  background-image: url("../img/sityview.jpg");
+}
 
+.description-image-bridge {
   background-image: url("../img/bridge.jpg");
-  background-size: 800px 256px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .advantages-list {
@@ -285,7 +291,7 @@ li:nth-child(3) .description-image {
   left: 50%;
 }
 
-.advantage-item:first-child::before {
+.advantage-item-1::before {
   width: 75px;
   height: 72px;
   margin-left: -38px;
@@ -295,7 +301,7 @@ li:nth-child(3) .description-image {
   background-position: 0 0;
 }
 
-.advantage-item:nth-child(2)::before {
+.advantage-item-2::before {
   width: 74px;
   height: 70px;
   margin-left: -37px;
@@ -305,7 +311,7 @@ li:nth-child(3) .description-image {
   background-position: 0 0;
 }
 
-.advantage-item:last-child::before {
+.advantage-item-3::before {
   width: 64px;
   height: 76px;
   margin-left: -32px;
@@ -325,10 +331,7 @@ li:nth-child(3) .description-image {
 }
 
 .other-descriptions .description-content {
-  padding-top: 49px;
-  padding-left: 66px;
-  padding-right: 66px;
-  padding-bottom: 58px;
+  padding: 49px 66px 58px 66px;
 }
 
 .search-hotel {
@@ -344,8 +347,7 @@ li:nth-child(3) .description-image {
 }
 
 .search-hotel h2 {
-  margin: 0;
-  margin-top: 53px;
+  margin: 53px 0 0 0;
 
   font-size: 30px;
   line-height: 36px;
@@ -354,9 +356,7 @@ li:nth-child(3) .description-image {
 }
 
 .search-hotel-text {
-  margin: 0 auto;
-  margin-top: 23px;
-  margin-bottom: 50px;
+  margin: 23px auto 50px auto;
 
   text-align: center;
 }
@@ -380,8 +380,8 @@ li:nth-child(3) .description-image {
 
 .button-search {
   min-width: 568px;
-  padding: 30px;
   margin: 0;
+  padding: 30px;
 
   font-size: 21px;
   line-height: 26px;
@@ -409,12 +409,12 @@ li:nth-child(3) .description-image {
 
 }
 
-.form-show {
+/* .form-show {
   display: block;
-}
+} */
 
 .search-hotel-form {
-  display: none;
+  /* display: none; */
 
   position: absolute;
   top: 291px;
@@ -423,7 +423,6 @@ li:nth-child(3) .description-image {
   box-sizing: border-box;
 
   width: 568px;
-  margin: 0 auto;
   padding: 55px;
 
   font-size: 14px;
@@ -443,6 +442,9 @@ li:nth-child(3) .description-image {
   align-items: center;
 
   margin-bottom: 30px;
+  /* зачем тут маргин? логичнее дать только для number-column
+
+  если его убрать - то отступа между полями нет */
 }
 
 .search-hotel-form input {
@@ -450,10 +452,7 @@ li:nth-child(3) .description-image {
 
   width: 346px;
   margin: 0;
-  padding: 0;
-  padding-left: 14px;
-  padding-top: 5px;
-  padding-bottom: 7px;
+  padding: 5px 14px 7px 14px;
 
   font: inherit;
 
@@ -480,10 +479,7 @@ li:nth-child(3) .description-image {
 }
 
 .search-hotel-form input:focus {
-  padding: 0;
-  padding-left: 12px;
-  padding-top: 3px;
-  padding-bottom: 5px;
+  padding: 3px 12px 5px 12px;
 
   background-color: #ffffff;
 
@@ -491,14 +487,9 @@ li:nth-child(3) .description-image {
   outline: none;
 }
 
-   /* KALENDAR */
-
+.arrival-date,
 .departure-date {
   position: relative;
-}
-
-.date-button path {
-  fill: green;
 }
 
 .date-button {
@@ -507,13 +498,26 @@ li:nth-child(3) .description-image {
   justify-content: center;
 
   position: absolute;
-  left: 316px;
+  right: 10px;
   top: 10px;
 
-  margin: 0;
   padding: 0;
   border: none;
-  background-color: #f2f2f2;
+
+  background-color: transparent;
+}
+
+.date-button path {
+  fill: #a9a9a9;
+}
+
+.date-button:hover path,
+.date-button:focus path {
+  fill: #000000;
+}
+
+.date-button:active path {
+  fill: #81b3d2;
 }
 
 .number-column {
@@ -524,55 +528,38 @@ li:nth-child(3) .description-image {
 }
 
 .number-column label {
-  margin-right: 37px;
+  margin-right: 39px;
 }
 
-.adult input,
-.children input {
+.search-hotel-item-number input {
   box-sizing: border-box;
 
   width: 38px;
   margin: 0;
-  margin-left: 38px;
-  margin-right: 38px;
-  padding: 0;
-  padding-top: 5px;
-  padding-bottom: 7px;
+  padding: 5px 0 7px 0;
 
   text-align: center;
 }
 
 .adult,
 .children {
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .number-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  width: 38px;
+  height: 38px;
   margin: 0;
   padding: 0;
 
   background-color: #f2f2f2;
   border: none;
-}
-
-.minus {
-  position: absolute;
-
-  width: 38px;
-  height: 38px;
-}
-
-.plus {
-  position: absolute;
-  top: 0;
-  left: 76px;
-
-  width: 38px;
-  height: 38px;
 }
 
 .minus::before {
@@ -616,7 +603,7 @@ li:nth-child(3) .description-image {
 }
 
 .minus:hover::before,
-.minus:focus::before {
+.minus:hover::before {
 	background-color: #000000;
 }
 
@@ -695,7 +682,7 @@ li:nth-child(3) .description-image {
 }
 
 .filter-title {
-  padding-bottom: 21px;
+  margin-bottom: 21px;
 
   font-size: 16px;
   line-height: 21px;
@@ -704,12 +691,12 @@ li:nth-child(3) .description-image {
 }
 
 .filter-option {
+  margin-bottom: 25px;
   padding-left: 40px;
-  padding-bottom: 25px;
 }
 
 .filter-option:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .filter-option label {
@@ -721,6 +708,9 @@ li:nth-child(3) .description-image {
   user-select: none;
 }
 
+ /* при клике на лейбл показывается чекбокс О_о
+
+ так это же вроде норм??*/
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -914,12 +904,12 @@ li:nth-child(3) .description-image {
   display: flex;
   align-items: center;
 
-  padding: 30px 72px;
+  padding: 30px 73px;
 }
 
 .hotels-sort-title {
-  margin: 0;
-  margin-right: 53px;
+  flex-shrink: 0;
+  margin: 0 46px 0 0;
   padding: 0;
 
   font-size: 21px;
@@ -940,6 +930,7 @@ li:nth-child(3) .description-image {
   display: flex;
 
   width: 100%;
+  margin-left: 40px;
 }
 
 .hotels-sort-list {
@@ -947,15 +938,13 @@ li:nth-child(3) .description-image {
   justify-content: space-between;
 
   margin: 0;
-  margin-left: 40px;
   padding: 0;
 
   list-style: none;
 }
 
 .hotels-sort-list a {
-  margin: 0;
-  margin-right: 32px;
+  margin: 0 32px 0 0;
 
   font-size: 12px;
   line-height: 18px;
@@ -984,8 +973,7 @@ li:nth-child(3) .description-image {
   display: flex;
   justify-content: space-between;
 
-  margin: 0;
-  margin-left: auto;
+  margin: 0 0 0 auto;
   padding: 0;
 
   list-style: none;
@@ -1023,8 +1011,7 @@ li:nth-child(3) .description-image {
 }
 
 .hotel-item p {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 3px 0 15px 0;
   padding: 0;
 }
 
@@ -1050,13 +1037,14 @@ li:nth-child(3) .description-image {
 
 .hotel-profile {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 
-  width: 260px;
+  margin-right: 30px;
 }
 
-.hotel-rating {
-  margin-left: 520px;
+.hotel-description {
+  display: flex;
 }
 
 .hotel-title a {
@@ -1073,12 +1061,36 @@ li:nth-child(3) .description-image {
   color: #cacaca;
 }
 
+.hotel-info {
+  width: 110px;
+  margin-right: 7px;
+}
+
+.info-button {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 3px 17px;
+}
+
+.info-button:hover {
+  background-color: #669ec0;
+}
+
+.info-button:active {
+  color: #88b6d1;
+
+  background-color: #5496bd;
+}
+
+.hotel-booking {
+  width: 143px;
+}
+
 .booking-button {
   box-sizing: border-box;
 
-  width: 143px;
   margin: 0;
-  padding: 0;
   padding: 3px 16px;
 
   background-color: #766357;
@@ -1094,30 +1106,12 @@ li:nth-child(3) .description-image {
   background-color: #503e33;
 }
 
-.info-button {
-  box-sizing: border-box;
-
-  width: 110px;
-  margin: 0;
-  margin-right: 7px;
-  padding: 0;
-  padding: 3px 17px;
-}
-
-.info-button:hover {
-  background-color: #669ec0;
-}
-
-.info-button:active {
-  color: #88b6d1;
-
-  background-color: #5496bd;
-}
-
 .hotel-rating {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  margin-left: auto;
 }
 
 .star-rating {
@@ -1136,7 +1130,6 @@ li:nth-child(3) .description-image {
 
 .hotel-rating p {
   margin: 0;
-  padding: 0;
   padding: 2px 13px 4px 15px;
 
   color: #666666;
@@ -1154,7 +1147,8 @@ li:nth-child(3) .description-image {
 }
 
 .index-footer {
-  margin-top: -120px;
+  position: absolute;
+  bottom: 0;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -1182,7 +1176,6 @@ li:nth-child(3) .description-image {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 151px;
   margin: 0 auto;
   padding: 0;
 
@@ -1196,6 +1189,7 @@ li:nth-child(3) .description-image {
 
   width: 45px;
   height: 48px;
+  margin-right: 6px;
 
   background-color: #81b3d2;
 }
@@ -1226,8 +1220,7 @@ li:nth-child(3) .description-image {
 .academy {
   width: 115px;
   height: 41px;
-  margin: 0;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
   padding: 0;
 
   background-color: #ffffff;
