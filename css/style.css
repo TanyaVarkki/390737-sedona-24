@@ -721,6 +721,7 @@ li:nth-child(3) .description-image {
 }
 
 .filter-title {
+  /* это внешний отступ */
   padding-bottom: 21px;
 
   font-size: 16px;
@@ -732,6 +733,7 @@ li:nth-child(3) .description-image {
 .filter-option {
   padding-left: 40px;
   padding-bottom: 25px;
+  /* отступ вниз - это внешний отступ */
 }
 
 .filter-option:last-child {
@@ -747,6 +749,7 @@ li:nth-child(3) .description-image {
   user-select: none;
 }
 
+ /* при клике на лейбл показывается чекбокс О_о */
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -944,6 +947,7 @@ li:nth-child(3) .description-image {
 }
 
 .hotels-sort-title {
+  /* flex-shrink: 0 */
   margin: 0;
   margin-right: 53px;
   padding: 0;
@@ -973,6 +977,7 @@ li:nth-child(3) .description-image {
   justify-content: space-between;
 
   margin: 0;
+  /* Отступ должен быть левый у родителя, а не у этого ul */
   margin-left: 40px;
   padding: 0;
 
@@ -1077,11 +1082,13 @@ li:nth-child(3) .description-image {
 .hotel-profile {
   display: flex;
   flex-wrap: wrap;
-
+  
+  /* не ограничивай его так жестко. дай просто маргин райт какой-то (30 пикслей)  для перестраховки */
   width: 260px;
 }
 
 .hotel-rating {
+  /* автматиечский отступ слева дай */
   margin-left: 520px;
 }
 
@@ -1101,7 +1108,7 @@ li:nth-child(3) .description-image {
 
 .booking-button {
   box-sizing: border-box;
-
+  /* убери ширину */
   width: 143px;
   margin: 0;
   padding: 0;
@@ -1122,7 +1129,8 @@ li:nth-child(3) .description-image {
 
 .info-button {
   box-sizing: border-box;
-
+  
+  /* убери ширину */
   width: 110px;
   margin: 0;
   margin-right: 7px;
@@ -1139,6 +1147,8 @@ li:nth-child(3) .description-image {
 
   background-color: #5496bd;
 }
+  
+/* .hotel-info , hotel-booking Дай ширину, отступ между собой */  
 
 .hotel-rating {
   display: flex;
