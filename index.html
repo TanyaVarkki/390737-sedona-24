@@ -114,7 +114,7 @@
 					<section class="map">
 						<h2 class="visually-hidden">Изображение города Седона на карте</h2>
 					</section>
-					<form class="search-hotel-form form-show" action="https://echo.htmlacademy.ru" method="post">
+					<form class="search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
 						<div class="search-hotel-item">
 							<label class="arrival-label" for="arrival-date">Дата заезда:</label>
 							<div class="arrival-date">
@@ -157,17 +157,17 @@
 							<div class="search-hotel-item search-hotel-item-number">
 								<label for="number-of-adult">Взрослые:</label>
 								<div class="adult">
-									<button class="number-button minus" type="button"></button>
+									<button class="number-button minus" type="button"  aria-label="Уменьшить количество взрослых"></button>
 									<input id="number-of-adult" type="text" name="number-of-adult" value="2">
-									<button class="number-button plus" type="button"></button>
+									<button class="number-button plus" type="button" aria-label="Увеличить количество взрослых"></button>
 								</div>
 							</div>
 							<div class="search-hotel-item search-hotel-item-number">
 								<label for="number-of-children">Дети:</label>
 								<div class="children">
-									<button class="number-button minus" type="button"></button>
+									<button class="number-button minus" type="button" aria-label="Уменьшить количество детей"></button>
 									<input id="number-of-children" type="text" name="number-of-children" value="0">
-									<button class="number-button plus" type="button"></button>
+									<button class="number-button plus" type="button" aria-label="Увеличить количество детей"></button>
 								</div>
 							</div>
 						</div>
@@ -223,7 +223,7 @@
 
 		link.addEventListener("click", function (evt) {
 			evt.preventDefault();
-			popup.classList.add("form-show");
+			popup.classList.toggle("form-show");
 		});
 
 		</script>
